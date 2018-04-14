@@ -19,5 +19,4 @@ class RecipeIngredient
   def recipe
     @recipe
   end
-
 end
