@@ -7,6 +7,7 @@ class RecipeCard
     @user = user
     @recipe = recipe
     @date = date
+    @rating = rating
     @@all << self
   end
 
