@@ -34,7 +34,7 @@ class User
   def top_three_recipes
     self.recipes.each.sort {|a, b| a.rating <=> b.rating}.reverse.first(3)
   end
-  
+
   def most_recent_recipe
     self.recipes.last
   end
