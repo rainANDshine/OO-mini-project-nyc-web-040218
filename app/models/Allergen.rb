@@ -1,6 +1,5 @@
 class Allergen
   attr_reader :user, :ingredient
-
   @@all = []
 
   def initialize(user, ingredient)
