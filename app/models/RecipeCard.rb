@@ -1,33 +1,32 @@
 class Recipecard
   attr_accessor :user, :recipe, :rating
   attr_reader :date
-@@all = []
+  @@all = []
+
   def initialize(user, recipe, date = Time.now, rating)
     @user = user
     @recipe = recipe
     @date = date
-     @@all << self
+    @@all << self
   end
 
-
-def  self.all
+  def self.all
     @@all
-end
+  end
 
   def date
     @date
   end
 
-def rating
-  @rating
-end
+  def rating
+    @rating
+  end
 
-def user
-  @user
-end
+  def user
+    @user
+  end
 
-def recipe
-  @recipe
-end
-
+  def recipe
+    @recipe
+  end
 end
