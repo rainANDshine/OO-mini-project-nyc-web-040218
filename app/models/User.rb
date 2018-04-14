@@ -44,6 +44,6 @@ class User
     user_allergic_c_ingredients = user_allergiies.map {|i| i.ingredients}
     user_recipes = RecipeCard.map {|i| i.recipe if i.user == self}
     user_all_ingredients = user_recipes.map {|i| i.ingredients}
-    user_allergic_ingredients.flatten - user_allergic_ingredients.flatten
+    (user_allergic_ingredients.flatten - user_allergic_ingredients.flatten).uniq
   end
 end
