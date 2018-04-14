@@ -40,9 +40,10 @@ class User
   end
 
   def safe_recipes
-    user_allergic_ingredients = Allergen.select {|i| i.user == self}
+    user_allergiies = Allergen.select {|i| i.user == self}
+    user_allergic_c_ingredients = user_allergiies.map {|i| i.ingredients}
     user_recipes = RecipeCard.map {|i| i.recipe if i.user == self}
-    user_all_ingredients = user_recipes.each {|i| i.ingredients}
+    user_all_ingredients = user_recipes.map {|i| i.ingredients}
     user_allergic_ingredients.flatten - user_allergic_ingredients.flatten
   end
 end
