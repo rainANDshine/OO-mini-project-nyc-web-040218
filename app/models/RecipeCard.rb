@@ -1,4 +1,4 @@
-class Recipecard
+class RecipeCard
   attr_accessor :user, :recipe, :rating
   attr_reader :date
   @@all = []
