@@ -34,7 +34,7 @@ class Recipe
 
   def add_ingredients(array_of_ingredients)
     array_of_ingredients.each do |e|
-      RecipeIngredient.new(array_of_ingredients[e], self)
+      RecipeIngredient.new(e, self)
     end
   end
 end
